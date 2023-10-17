@@ -4,7 +4,7 @@
     <select [(ngModel)]="bindData">
       <option *ngFor="let item of ReportType | enumToArray" [value]="item.key">{{item.key}}</option>
     </select>
-    <div logger [logger]="bindData" style="width: 100px; height: 50px; background-color: red; color: black; display: flex; margin: 10px; justify-content: center; cursor: pointer;">
+    <div logger [logger]="bindData" class="logger-button">
       logger button
     </div>
   </div>

@@ -14,4 +14,24 @@ export class LoggerDirective {
   onClick() {
     console.log('direktif dinliyor:', this.logger);
   }
+
+  // @HostListener('dblclick')
+  // onDblClick() {
+  //   console.log('direktif dinliyor dbl:', this.logger);
+  // }
+
+  // @HostListener('mouseenter')
+  // onMouseEnter() {
+  //   console.log('direktif dinliyor mouseenter:', this.logger);
+  // }
+
+  // @HostListener('mouseleave')
+  // onMouseLeave() {
+  //   console.log('direktif dinliyor mouseleave:', this.logger);
+  // }
+
+  // @HostListener('focus')
+  // onFocus() {
+  //   console.log('direktif dinliyor focus:', this.logger);
+  // }
 }

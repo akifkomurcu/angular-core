@@ -8,6 +8,8 @@ import { PagesModule } from './pages/pages.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoginGuard } from './core/guard/guard';
 import { httpInterceptor } from './core/interceptors/intercept.interceptor';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { httpInterceptor } from './core/interceptors/intercept.interceptor';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [
     HttpClientModule,

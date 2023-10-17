@@ -6,14 +6,14 @@ import { Observable } from 'rxjs';
 export class httpInterceptor implements HttpInterceptor {
   updatedRequest: any;
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log('intercept çalıştı', req);
 
     this.updatedRequest = req.clone({
       headers: req.headers
-        .set('Authorization', `Bearer`)
-        .set('research-center', 'sadasdasdasd')
+      .set('Authorization', `Bearer`)
+      .set('research-center', 'sadasdasdasd')
     });
 
+    console.log('intercept çalıştı', this.updatedRequest);
     return next.handle(this.updatedRequest)
   }
 }

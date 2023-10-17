@@ -16,8 +16,8 @@ export class LoginGuard implements CanActivate {
     const username = this.authService.getUsername();
     const password = this.authService.getPassword();
 
-    if (username === 'akif' && password === '123') {
-      console.log('girdi');
+    if (username === 'admin@admin.com' && password === '123123') {
+      console.log('Login başarılı. Guarddan geçti');
       return true;
     }
 

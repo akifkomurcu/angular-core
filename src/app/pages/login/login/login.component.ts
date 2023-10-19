@@ -18,14 +18,7 @@ export class LoginComponent implements OnInit {
     private readonly authService: AuthService,
     private activatedRoute: ActivatedRoute,
     private router: Router
-  ) {
-    this.activatedRoute.data.subscribe(res => {
-      console.log('res', res);
-      //şimdi istersen select'e bağlarsın bunu.
-      this.datageldi = res;
-
-    })
-  }
+  ) {}
 
   ngOnInit() {
   }

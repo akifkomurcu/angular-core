@@ -1,18 +1,11 @@
 <div class="main">
-  <div class="login-area">
-    <div class="login">
-      <div class="login-form">
-        <form [formGroup]="form" (submit)="onSubmit()">
-          <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" formControlName="username"/>
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" formControlName="password"/>
-          </div>
-          <button type="submit" class="btn btn-primary">Login</button>
-        </form>
+  <div class="window">
+    login olundu
+    <select [(ngModel)]="bindData">
+      <option *ngFor="let item of ReportType | enumToArray" [value]="item.key">{{item.key}}</option>
+    </select>
+    <div logger [logger]="bindData" class="logger-button">
+      logger button
     </div>
   </div>
 </div>

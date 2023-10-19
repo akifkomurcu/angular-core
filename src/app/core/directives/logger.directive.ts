@@ -9,10 +9,11 @@ export class LoggerDirective {
 
   @Input()
   logger: any;
+  xTimes: number = 0;
 
   @HostListener('click')
   onClick() {
-    console.log('direktif dinliyor:', this.logger);
+    console.log('direktif dinliyor:', this.logger, ++this.xTimes);
   }
 
   // @HostListener('dblclick')

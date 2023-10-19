@@ -6,11 +6,11 @@ import { LoginGuard } from './core/guard/guard';
 import { httpResolver } from './core/resolvers/http.resolver';
 const routes: Routes = [
   {
-    path: "", component: HomeComponent
+    path: "", component: LoginComponent
   },
   {
-    path: 'login',
-    component: LoginComponent,
+    path: 'home',
+    component: HomeComponent,
     canActivate: [LoginGuard],
     resolve: {
       httpResolver

@@ -9,6 +9,9 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoginGuard } from './core/guard/guard';
 import { httpInterceptor } from './core/interceptors/intercept.interceptor';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxsModule } from '@ngxs/store';
+import { CommonState } from './core/state/common.state';
 
 
 @NgModule({
@@ -21,6 +24,8 @@ import { FormsModule } from '@angular/forms';
     PagesModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
+    NgxsModule.forRoot([CommonState])
   ],
   providers: [
     HttpClientModule,

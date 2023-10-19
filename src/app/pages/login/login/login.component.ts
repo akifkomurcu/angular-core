@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
-import { combineLatest, from, interval, of } from 'rxjs';
-import { concatMap, distinctUntilChanged, zip, filter, map, mergeMap, scan, take } from 'rxjs/operators';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -27,18 +25,13 @@ export class LoginComponent implements OnInit {
       this.datageldi = res;
 
     })
-
-   }
+  }
 
   ngOnInit() {
-
   }
 
   onSubmit() {
     this.authService.setUser(this.form.value.username, this.form.value.password);
     this.router.navigate(['/home']);
-
   }
-
-
 }

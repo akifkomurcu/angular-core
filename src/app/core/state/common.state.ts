@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
-import { Selector, State } from "@ngxs/store";
+import { Action, Selector, State, StateContext } from "@ngxs/store";
 import { AuthService } from "src/app/core/services/auth.service";
+import { commonAction } from "./actions/common.action";
 
 
 @State<any>({
@@ -19,5 +20,14 @@ export class CommonState {
   @Selector()
   static test(state: any) {
     return state.test;
+  }
+
+  @Action(commonAction)
+  commonAction(
+    { patchState }: StateContext<any>,
+    { payload }: commonAction
+    ) {
+    patchState({ test: payload });
+    console.log('payload', payload);
   }
 }

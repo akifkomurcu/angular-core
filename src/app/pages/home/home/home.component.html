@@ -1,7 +1,7 @@
 <div class="main">
   <div class="window">
     login olundu
-    <select [(ngModel)]="bindData">
+    <select [(ngModel)]="bindData" (change)="onChange($event)">
       <option *ngFor="let item of ReportType | enumToArray" [value]="item.key">{{item.key}}</option>
     </select>
     <div logger [logger]="bindData" class="logger-button">

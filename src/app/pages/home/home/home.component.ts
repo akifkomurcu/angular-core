@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Store } from '@ngxs/store';
 import { combineLatest, from, interval, of } from 'rxjs';
 import { concatMap, distinctUntilChanged, zip, filter, map, mergeMap, scan, take } from 'rxjs/operators';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { commonAction } from 'src/app/core/state/actions/common.action';
+import { CommonState } from 'src/app/core/state/common.state';
 
 enum ReportType {
   SUCCESS = 'success',
@@ -20,7 +23,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private store: Store
   ) { }
   datageldi: any
   bindData: any
@@ -28,7 +32,7 @@ export class HomeComponent implements OnInit {
   ReportType = ReportType
   ngOnInit() {
     // this.rxJSFunction();
-
+    // this.store.dispatch(new commonAction());
 
 
     // this.authService.postDatas({
@@ -102,5 +106,15 @@ export class HomeComponent implements OnInit {
     console.log('--------------------take---------------------------')
   }
 
+  onChange(e: any) {
+    console.log('change', e.target.value);
+    if(e.target.value) {
+      this.store.dispatch(new commonAction(e.target.value)).pipe(
+        map(()=> this.store.selectSnapshot(CommonState.test))
+      ).subscribe(res => {
+        console.log('res::::', res);
+      })
+    }
+  }
 
 }

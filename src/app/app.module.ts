@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxsModule } from '@ngxs/store';
 import { CommonState } from './core/state/common.state';
-
+import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { CommonState } from './core/state/common.state';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    NgxsModule.forRoot([CommonState])
+    NgxsModule.forRoot([CommonState]),
+    NgxsRouterPluginModule.forRoot()
   ],
   providers: [
     HttpClientModule,

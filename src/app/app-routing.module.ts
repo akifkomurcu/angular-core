@@ -4,6 +4,7 @@ import { LoginComponent } from './pages/login/login/login.component';
 import { HomeComponent } from './pages/home/home/home.component';
 import { LoginGuard } from './core/guard/guard';
 import { httpResolver } from './core/resolvers/http.resolver';
+import { RxjsComponent } from './pages/rxjs/rxjs/rxjs.component';
 const routes: Routes = [
   {
     path: "", component: LoginComponent
@@ -11,7 +12,15 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    canActivate: [LoginGuard],
+    // canActivate: [LoginGuard],
+    resolve: {
+      httpResolver
+    }
+  },
+  {
+    path: 'rxjs',
+    component: RxjsComponent,
+    // canActivate: [LoginGuard],
     resolve: {
       httpResolver
     }

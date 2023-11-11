@@ -1,16 +1,14 @@
 .main {
-  background-color: rgb(0, 0, 0);
+  background-color: #023020;
   height: 100vh;
   color: white;
+  width: 100%;
+
 }
 
-.window {
-  display: flex;
-  justify-content: center;
+/* .window {
   height: 200px;
-  flex-direction: column;
   width: 150px;
-  margin: 0 auto;
 }
 
 select {
@@ -32,19 +30,40 @@ option:hover {
   background-color: #f0f0f0;
 }
 
-.logger-button {
-  width: 115px;
-  height: 50px;
-  background-color: red;
-  color: black;
+.button-area {
   display: flex;
-  margin: 10px;
   justify-content: center;
-  cursor: pointer;
+  width: max-content;
+  height: 50px;
+
+  color: black;
   align-items: center;
+}
+
+.logger-button {
+  background-color: #287f8d;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
   font-size: 25px;
   font-weight: 500;
   border-radius: 10px;
   border: 1px solid grey;
 }
+ */
 
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.233);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

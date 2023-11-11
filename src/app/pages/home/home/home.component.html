@@ -1,11 +1,20 @@
 <div class="main">
-  <div class="window">
-    login olundu
-    <select [(ngModel)]="bindData" (change)="onChange($event)">
-      <option *ngFor="let item of ReportType | enumToArray" [value]="item.key">{{item.key}}</option>
-    </select>
-    <div logger [logger]="bindData" class="logger-button">
-      logger button
+  <div class="grid-container" *ngFor="let item of examples">
+    <div class="grid-item" (click)="goToLink(item.link)" >
+      {{ item.name }}
     </div>
   </div>
+  <!-- <div class="window">
+    <div class="compnents">
+      login olundu
+      <select [(ngModel)]="bindData" (change)="onChange($event)">
+        <option *ngFor="let item of ReportType | enumToArray" [value]="item.key">{{item.key}}</option>
+      </select>
+      <div alert logger [logger]="bindData" class="button-area">
+        <div class="logger-button">
+          logger button
+        </div>
+      </div>
+    </div>
+  </div> -->
 </div>

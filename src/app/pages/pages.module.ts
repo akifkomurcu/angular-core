@@ -7,13 +7,15 @@ import { LoginGuard } from '../core/guard/guard';
 import { Routes, RouterModule } from '@angular/router';
 import { EnumToArrayPipe } from '../core/pipes/enum-to-array-pipe';
 import { LoggerDirective } from '../core/directives/logger.directive';
+import { AlertPipe } from '../core/pipes/alert.pipe';
+import { RxjsComponent } from './rxjs/rxjs/rxjs.component';
 
 
 
 @NgModule({
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   exports: [],
-  declarations: [LoginComponent, HomeComponent, EnumToArrayPipe, LoggerDirective],
+  declarations: [LoginComponent, HomeComponent, EnumToArrayPipe, LoggerDirective, AlertPipe, RxjsComponent],
   providers: [
 
   ],

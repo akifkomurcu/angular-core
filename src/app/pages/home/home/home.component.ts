@@ -24,6 +24,10 @@ export class HomeComponent implements OnInit {
     {
       name: 'rxJS Example',
       link: '/rxjs'
+    },
+    {
+      name: 'lifeCycle Example',
+      link: '/lifecycle'
     }
   ]
 

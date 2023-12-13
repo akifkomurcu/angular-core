@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home/home.component';
 import { LoginGuard } from './core/guard/guard';
 import { httpResolver } from './core/resolvers/http.resolver';
 import { RxjsComponent } from './pages/rxjs/rxjs/rxjs.component';
+import { LifecycleComponent } from './pages/lifecycle/lifecycle.component';
 const routes: Routes = [
   {
     path: "", component: LoginComponent
@@ -20,6 +21,14 @@ const routes: Routes = [
   {
     path: 'rxjs',
     component: RxjsComponent,
+    // canActivate: [LoginGuard],
+    resolve: {
+      httpResolver
+    }
+  },
+  {
+    path: 'lifecycle',
+    component: LifecycleComponent,
     // canActivate: [LoginGuard],
     resolve: {
       httpResolver

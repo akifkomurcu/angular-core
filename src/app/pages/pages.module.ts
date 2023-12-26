@@ -11,13 +11,26 @@ import { AlertPipe } from '../core/pipes/alert.pipe';
 import { RxjsComponent } from './rxjs/rxjs/rxjs.component';
 import { SubPageComponent } from './lifecycle/sub-page/sub-page/sub-page.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ChangeStrategyParentComponent } from './change-strategy/change-strategy-parent/change-strategy-parent.component';
+import { ChangeStrategyChildComponent } from './change-strategy/change-strategy-child/change-strategy-child.component';
 
 
 
 @NgModule({
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   exports: [],
-  declarations: [LoginComponent, HomeComponent, EnumToArrayPipe, LoggerDirective, AlertPipe, RxjsComponent,LifecycleComponent, SubPageComponent],
+  declarations: [
+    LoginComponent,
+    HomeComponent,
+    EnumToArrayPipe,
+    LoggerDirective,
+    AlertPipe,
+    RxjsComponent,
+    LifecycleComponent,
+    SubPageComponent,
+    ChangeStrategyParentComponent,
+    ChangeStrategyChildComponent
+  ],
   providers: [
 
   ],

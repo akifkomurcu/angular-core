@@ -1,0 +1,7 @@
+<app-change-strategy-child *ngFor="let product of productList"
+[product]="product"></app-change-strategy-child>
+
+<p>{{ counter }}</p>
+<div><button (click)="updateProduct()">Update Product</button></div>
+
+<div><button (click)="updateCounter()">Update Counter</button></div>

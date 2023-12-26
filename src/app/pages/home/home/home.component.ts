@@ -28,6 +28,10 @@ export class HomeComponent implements OnInit {
     {
       name: 'lifeCycle Example',
       link: '/lifecycle'
+    },
+    {
+      name: 'Change Strategy Example',
+      link: '/change-strategy'
     }
   ]
 
